@@ -1,0 +1,61 @@
+name: auto-filter-bot
+type: service
+scalability:
+  instance_type: nano
+  autoscale: true
+ports:
+  - http: 5000
+
+build:
+  type: docker
+  dockerfile_path: Dockerfile
+
+env:
+  - key: BOT_TOKEN
+    value: ${7387135619:AAEG0w5cWndk0oKjoRShArEy5rK0OYCyUP8}
+  - key: AUTH_CHANNEL_ID
+    value: ${-1002049964184}
+  - key: DATABASE_URL
+    value: ${mongodb+srv://guday3417:GUDAY333@cluster0.pdrwfcn.mongodb.net/?retryWrites=true&w=majority}
+  - key: LOG_LEVEL
+    value: INFO
+
+services:
+  - name: bot
+    source:
+      type: git
+      git_url: https://github.com/username/repo-name
+      git_branch: main
+    http_port: 5000
+    env:
+      - key: BOT_TOKEN
+        value: ${7387135619:AAEG0w5cWndk0oKjoRShArEy5rK0OYCyUP8}
+      - key: AUTH_CHANNEL_ID
+        value: ${-1002049964184}
+      - key: DATABASE_URL
+        value: ${mongodb+srv://guday3417:GUDAY333@cluster0.pdrwfcn.mongodb.net/?retryWrites=true&w=majority}
+    build:
+      dockerfile_path: Dockerfile
+    scalability:
+      instance_type: nano
+      autoscale: true
+    ports:
+      - http: 5000
+
+  - name: mongo
+    type: database
+    database:
+      engine: mongodb
+      version: "4.4"
+    scalability:
+      instance_type: nano
+      autoscale: true
+    ports:
+      - http: 8080
+    env:
+      - key: MONGO_INITDB_ROOT_USERNAME
+        value: Udayg3417
+      - key: MONGO_INITDB_ROOT_PASSWORD
+        value: GUDAY333
+      - key: MONGO_INITDB_DATABASE
+        value: Cluster0
