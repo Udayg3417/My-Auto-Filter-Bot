@@ -1,8 +1,8 @@
 {
-    "name": "ᎯℕUℛᎯᎶ",
-    "description": "Clone Of ᎯℕUℛᎯᎶ & More Features Added",
+    "name": "Uday",
+    "description": "Clone Of Uday & More Features Added",
     "stack": "container",
-    "logo": "https://telegra.ph/file/9ee1253e36b37a1665ce2.jpg",
+    "logo": "https://telegra.ph/file/8cd0e2214551be3ee7a48.jpg",
     "keywords": [
       "telegram",
       "auto-filter",
@@ -16,19 +16,19 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/AM-ROBOTS/AM-ROBOTS",
-    "repository": "https://github.com/AM-ROBOTS/AM-ROBOTS",
+    "website": "https://github.com/Udayg3417/My-Auto-Filter-Bot",
+    "repository": "https://github.com/Udayg3417/My-Auto-Filter-Bot",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token.",
+            "description": "7387135619:AAEG0w5cWndk0oKjoRShArEy5rK0OYCyUP8",
             "required": true
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "21562110",
             "required": true
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "4d1e1f333214a39cea79a3196cbed290",
             "required": true
         },
         "CHANNELS": {
@@ -36,7 +36,7 @@
             "required": false
         },
         "ADMINS": {
-            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "description": "6909056240",
             "required": true
         },
         "PICS": {
@@ -44,7 +44,7 @@
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "description": "-1002191088551",
             "required": true
         },
         "AUTH_USERS": {
@@ -52,11 +52,11 @@
             "required": false
         },
         "AUTH_CHANNEL": {
-            "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
-            "required": false
+            "description": "-1002049964184",
+            "required": true
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/h9QjSSmk5tw",
+            "description": "mongodb+srv://guday3417:GUDAY333@cluster0.pdrwfcn.mongodb.net/?retryWrites=true&w=majority",
             "required": true
         },
         "DATABASE_NAME": {
@@ -71,7 +71,7 @@
     },
     "addons": [],
     "buildpacks": [{
-        "url": "heroku/python"
+        "url": "koyeb/python"
     }],
     "formation": {
         "worker": {
