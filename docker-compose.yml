@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: auto-filter-bot
+    environment:
+      - BOT_TOKEN=${7387135619:AAEG0w5cWndk0oKjoRShArEy5rK0OYCyUP8}
+      - AUTH_CHANNEL_ID=${-1002049964184}
+      - DATABASE_URL=${mongodb+srv://guday3417:GUDAY333@cluster0.pdrwfcn.mongodb.net/?retryWrites=true&w=majority}
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+  
