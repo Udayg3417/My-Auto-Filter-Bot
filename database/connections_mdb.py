@@ -6,8 +6,9 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-myclient = pymongo.MongoClient(DATABASE_URI)
-mydb = myclient[DATABASE_NAME]
+myclient = pymongo.MongoClient(mongodb+srv://guday3417:GUDAY333@cluster0.pdrwfcn.mongodb.net/?retryWrites=true&w=majority
+)
+mydb = myclient[Cluster0]
 mycol = mydb['CONNECTION']   
 
 
